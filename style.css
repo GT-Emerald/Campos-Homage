@@ -762,3 +762,33 @@ footer p {
 .close:hover {
     color: #e0e0e0;
 }
+/* Ajustes finais para imagens em celulares — mantém todas as cores e o desktop */
+@media (max-width: 768px) {
+    /* Foto da Gabriela: altura acompanha a proporção original para não cortar */
+    .about-image {
+        height: auto;
+        min-height: 0;
+    }
+
+    .about-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 70vh;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    /* Fotos dos cantores e imagens da galeria: mostrar a imagem inteira */
+    .member-avatar img,
+    .gallery-item img {
+        object-fit: contain;
+        object-position: center;
+    }
+
+    /* Evita que o efeito de hover volte a ampliar/cortar as fotos na tela touch */
+    .gallery-item:hover,
+    .gallery-item:hover img {
+        transform: none;
+    }
+}
