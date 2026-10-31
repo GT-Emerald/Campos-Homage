@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Homenagem para Gabriela Xucrim - Fã de BTS com foco em Jungkook">
+    <meta name="theme-color" content="#d4af37">
+    <title> ⟭⟬ Gabriela's BTS Tribute - Jungkook Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">🎵 𝓖𝓪𝓫𝓻𝓲𝓮𝓵𝓪 𝓧𝓾𝓬𝓻𝓲𝓷'𝓼 𝓔𝓭𝓲𝓽𝓲𝓸𝓷</div>
+        <ul class="nav-links">
+            <li><a onclick="scrollToSection('about')">Sobre</a></li>
+            <li><a onclick="scrollToSection('gallery')">Galeria</a></li>
+            <li><a onclick="scrollToSection('members')">Membros</a></li>
+            <li><a onclick="scrollToSection('quotes')">Citações</a></li>
+            <li><a onclick="scrollToSection('birthday')">Aniversário</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>𝓖𝓐𝓑𝓡𝓘𝓔𝓛𝓐'𝓢 𝓑𝓣𝓢 𝓣𝓡𝓘𝓑𝓤𝓣𝓔</h1>
+            <p>"Jungkook - The Golden Maknae"</p>
+            <button class="cta-button" onclick="scrollToSection('about')">Explorar</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-text">
+            <h2>Sobre Gabriela</h2>
+            <p>Gabriela Xucrim é uma CHATA fã apaixonada do BTS, com admiração especial pelo Jungkook. Sua dedicação e amor pela música do grupo é inspirador! Chega a ser doidiera às vezes , os mano aí é tudo viado , mas fazer oq , ela pira neles com doidiera TOTAL!!!!.</p>
+            <p>Este site é uma """homenagem""" ao seu aniversário e à sua paixão pelo BTS. Não se acostuma não blz , que o trem tá feio msm .</p>
+            <p>Fique com o resto agora aí e lê esse trem direito blz👍🏻</p>
+        </div>
+        <div class="about-image">
+            <span></span>
+            <img src="chatice gameplays.jpeg" alt="XUCRIM">
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <h2>Galeria de Momentos</h2>
+        <div class="gallery-container">
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="boiola 2.jpg" alt="Gabriela's BTS Moment">
+                <div class="gallery-item-overlay">
+                    <div class="gallery-item-text">Clique para ampliar</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Members Section -->
+    <section class="members" id="members">
+        <h2>Membros do BTS</h2>
+        <div class="members-grid">
+            <div class="member-card">
+                <div class="member-avatar">
+                    <img src="RM photo.jpg" alt="RM">
+                </div>
+                <div class="member-name">RM</div>
+                <div class="member-role">Líder, Rapper</div>
+            </div>
+            <div class="member-card">
+                <div class="member-avatar">
+                    <img src="JIN photo.png" alt="Jin">
+                </div>
+                <div class="member-name">Jin</div>
+                <div class="member-role">Vocal</div>
+            </div>
+            <div class="member-card">
+                <div class="member-avatar">
+                    <img src="SUGA photo.jpg" alt="Suga">
+                </div>
+                <div class="member-name">Suga</div>
+                <div class="member-role">Rapper, Produtor</div>
+            </div>
+            <div class="member-card">
+                <div class="member-avatar">
+                    <img src="J hope photo.jpg" alt="J-Hope">
+                </div>
+                <div class="member-name">J-Hope</div>
+                <div class="member-role">Rapper, Dançarino</div>
+            </div>
+            <div class="member-card">
+                <div class="member-avatar">
+                    <img src="Jimin photo.jpg" alt="Jimin">
+                </div>
+                <div class="member-name">Jimin</div>
+                <div class="member-role">Vocal, Dançarino</div>
+            </div>
+            <div class="member-card">
+                <div class="member-avatar">
+                    <img src="V photo.jpg" alt="V">
+                </div>
+                <div class="member-name">V (Taehyung)</div>
+                <div class="member-role">Vocal, Ator</div>
+            </div>
+            <div class="member-card">
+                <div class="member-avatar" style="border: 3px solid #ffd700; box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);">
+                    <img src="Jungkook foto.webp" alt="Jungkook">
+                </div>
+                <div class="member-name">Jungkook ⭐</div>
+                <div class="member-role">Vocal, Dançarino, Produtor</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quotes Section -->
+    <section class="quotes" id="quotes">
+        <h2>Frases Inspiradoras</h2>
+        <div class="quote-card">
+            <p>"Life goes on, even when the days are hard."</p>
+            <div class="quote-author">- BTS, Life Goes On</div>
+        </div>
+        <div class="quote-card">
+            <p>"Even if you stumble, you're still moving forward."</p>
+            <div class="quote-author">- BTS, Spring Day</div>
+        </div>
+        <div class="quote-card">
+            <p>"I'm still here, still breathing, still standing."</p>
+            <div class="quote-author">- Jungkook</div>
+        </div>
+    </section>
+
+    <!-- Birthday Section -->
+    <section class="birthday" id="birthday">
+        <h2>🎉 Feliz Aniversário, Gabriela! 🎉</h2>
+        <div class="birthday-message">
+            <p>Tá bom Gabriela,</p>
+            <p>Neste dia especial, queremos celebrar você e toda a alegria que traz para nossas vidas!</p>
+            <p>Assim como o Jungkook brilha no palco, você brilha em nossas vidas com sua dedicação, paixão e amor pelo BTS.</p>
+            <p>Que este ano seja repleto de momentos incríveis, novas músicas do BTS e muita felicidade!</p>
+            <p style="font-size: 1.5rem; margin-top: 2rem;">🎂 Que seu dia seja tão especial quanto você! 🎂 </p>
+              <p>  "VOU EDITAR ESSE TREM NÃO"  </p>
+        </div>
+        <button class="cta-button" style="margin-top: 2rem;" onclick="celebrateNow()">Celebrar! 🎊</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Gabriela's BTS Tribute - Feito com ódio para Gabriela Xucrim</p>
+        <p>Celebrando o talento e a paixão do BTS</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Audio Elements (Hidden) -->
+    <audio id="backgroundMusic" loop preload="auto">
+        <source src="./dynamite-bts.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="confettiSound" preload="auto">
+        <source src="./confetti-pop.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="fireworkSound" preload="auto">
+        <source src="./foguete-alto.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
