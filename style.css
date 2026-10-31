@@ -1,226 +1,193 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #e0e0e0;
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #fff;
     overflow-x: hidden;
 }
 
-/* Navbar */
+/* Navegação */
 nav {
-    background: rgba(26, 26, 46, 0.95);
-    backdrop-filter: blur(10px);
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 2px solid #d4af37;
+    width: 100%;
+    padding: 20px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: rgba(10, 10, 30, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
     color: #d4af37;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
     list-style: none;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
-    color: #e0e0e0;
+    color: white;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
     cursor: pointer;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
     color: #d4af37;
 }
 
-/* Hero Section */
+/* Início */
 .hero {
-    height: 100vh;
+    min-height: 85vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(26, 26, 46, 0.95) 100%),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(212,175,55,0.05)" stroke-width="1"/></pattern></defs><rect width="1200" height="600" fill="url(%23grid)"/></svg>');
-    background-size: cover;
-    background-position: center;
+    align-items: center;
     text-align: center;
-    position: relative;
-    overflow: hidden;
+    padding: 40px 20px;
+    background: linear-gradient(rgba(10, 10, 30, 0.65), rgba(10, 10, 30, 0.8));
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.15) 0%, transparent 50%);
-    pointer-events: none;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    animation: fadeInUp 1s ease-out;
-}
-
-.hero h1 {
-    font-size: 4rem;
-    font-weight: 700;
+.hero-content h1 {
+    font-size: 3rem;
     color: #d4af37;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    letter-spacing: 3px;
+    margin-bottom: 20px;
 }
 
-.hero p {
+.hero-content p {
     font-size: 1.5rem;
-    color: #b8b8b8;
-    margin-bottom: 2rem;
-    font-style: italic;
+    margin-bottom: 30px;
 }
 
 .cta-button {
-    display: inline-block;
-    padding: 1rem 2.5rem;
-    background: linear-gradient(135deg, #d4af37 0%, #c99f2e 100%);
-    color: #1a1a2e;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
-    cursor: pointer;
+    background: linear-gradient(45deg, #d4af37, #f7e7a1);
+    color: #17132c;
     border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
 }
 
-/* About Section */
+/* Sobre */
 .about {
-    padding: 6rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    padding: 80px 8%;
+    display: flex;
     align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
-.about-text h2 {
-    font-size: 2.5rem;
+.about-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.about-text h2,
+.gallery h2,
+.members h2,
+.quotes h2,
+.birthday h2 {
     color: #d4af37;
-    margin-bottom: 1.5rem;
-    letter-spacing: 2px;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .about-text p {
     font-size: 1.1rem;
-    color: #b8b8b8;
-    margin-bottom: 1rem;
     line-height: 1.8;
+    margin-bottom: 18px;
 }
 
 .about-image {
-    width: 100%;
-    height: 900px;
-    background: linear-gradient(135deg, #2d2d44 0%, #1a1a2e 100%);
-    border-radius: 10px;
-    border: 3px solid #d4af37;
+    flex: 1;
+    min-width: 280px;
+    height: 500px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 3rem;
-    color: #d4af37;
-    overflow: hidden;
+    align-items: center;
 }
 
 .about-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
 }
 
-/* Gallery Section */
+/* Galeria */
 .gallery {
-    padding: 6rem 2rem;
-    background: linear-gradient(135deg, rgba(26, 26, 46, 0.5) 0%, rgba(45, 45, 68, 0.5) 100%);
-}
-
-.gallery h2 {
-    font-size: 2.5rem;
-    color: #d4af37;
+    padding: 80px 8%;
     text-align: center;
-    margin-bottom: 3rem;
-    letter-spacing: 2px;
 }
 
 .gallery-container {
-    max-width: 900px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
 .gallery-item {
-    position: relative;
+    width: 100%;
+    max-width: 500px;
     height: 500px;
-    border-radius: 10px;
+    position: relative;
     overflow: hidden;
-    border: 3px solid #d4af37;
+    border-radius: 15px;
     cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.gallery-item:hover {
-    transform: scale(1.02);
+    border: 2px solid #d4af37;
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+    object-fit: contain;
+    transition: transform 0.4s;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
 .gallery-item-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
+    inset: 0;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: flex-end;
+    padding: 25px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s;
 }
 
 .gallery-item:hover .gallery-item-overlay {
@@ -228,59 +195,43 @@ nav {
 }
 
 .gallery-item-text {
-    color: #d4af37;
-    font-size: 1.5rem;
+    color: white;
+    font-size: 1.1rem;
     font-weight: bold;
-    text-align: center;
 }
 
-/* Members Section */
+/* Membros */
 .members {
-    padding: 6rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.members h2 {
-    font-size: 2.5rem;
-    color: #d4af37;
+    padding: 80px 8%;
     text-align: center;
-    margin-bottom: 3rem;
-    letter-spacing: 2px;
 }
 
 .members-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
 }
 
 .member-card {
-    background: transparent;
-    border: none;
-    border-radius: 10px;
-    padding: 0;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    transition: transform 0.3s, background 0.3s;
 }
 
 .member-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.13);
 }
 
 .member-avatar {
-    width: 100%;
-    height: 280px;
-    margin: 0 auto 1rem;
-    background: linear-gradient(135deg, #2d2d44 0%, #1a1a2e 100%);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-    color: #d4af37;
-    border: 2px solid #d4af37;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
     overflow: hidden;
+    border: 3px solid #d4af37;
 }
 
 .member-avatar img {
@@ -290,174 +241,136 @@ nav {
 }
 
 .member-name {
-    font-size: 1.3rem;
-    color: #d4af37;
-    margin-bottom: 0.3rem;
-    margin-top: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
+    color: #d4af37;
+    margin-bottom: 8px;
 }
 
 .member-role {
-    color: #b8b8b8;
-    font-size: 0.9rem;
+    color: #ddd;
+    font-size: 0.95rem;
 }
 
-/* Quotes Section */
+/* Citações */
 .quotes {
-    padding: 6rem 2rem;
-    background: linear-gradient(135deg, rgba(45, 45, 68, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%);
+    padding: 80px 8%;
     text-align: center;
-}
-
-.quotes h2 {
-    font-size: 2.5rem;
-    color: #d4af37;
-    margin-bottom: 3rem;
-    letter-spacing: 2px;
 }
 
 .quote-card {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: rgba(26, 26, 46, 0.8);
-    border-left: 5px solid #d4af37;
-    border-radius: 5px;
-    font-size: 1.3rem;
-    color: #e0e0e0;
+    max-width: 750px;
+    margin: 20px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    border-left: 4px solid #d4af37;
+    border-radius: 10px;
+}
+
+.quote-card p {
+    font-size: 1.2rem;
     font-style: italic;
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
 .quote-author {
-    margin-top: 1rem;
     color: #d4af37;
+    margin-top: 15px;
     font-weight: bold;
-    font-style: normal;
 }
 
-/* Birthday Message */
+/* Aniversário */
 .birthday {
-    padding: 6rem 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
+    padding: 80px 8%;
     text-align: center;
-}
-
-.birthday h2 {
-    font-size: 2.5rem;
-    color: #d4af37;
-    margin-bottom: 2rem;
-    letter-spacing: 2px;
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .birthday-message {
-    background: linear-gradient(135deg, #2d2d44 0%, #1a1a2e 100%);
-    border: 3px solid #d4af37;
-    border-radius: 10px;
-    padding: 3rem;
-    font-size: 1.2rem;
-    color: #e0e0e0;
-    line-height: 2;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 1.1rem;
 }
 
 .birthday-message p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 15px;
 }
 
-/* CONFETTI PROFISSIONAL - PAPO DE PROFISSIONAL! */
-.confetti {
-    position: fixed;
-    width: 10px;
-    height: 10px;
-    background: #d4af37;
-    pointer-events: none;
-    animation: fall 4s ease-in forwards;
-    will-change: transform, opacity;
-}
-
-.confetti.type-1 {
-    animation: fall-spin 4s ease-in forwards;
-}
-
-.confetti.type-2 {
-    animation: fall-wave 4s ease-in forwards;
-}
-
-.confetti.type-3 {
-    animation: fall-bounce 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-@keyframes fall {
-    0% {
-        opacity: 1;
-        transform: translateY(0) translateX(0) rotate(0deg);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(100vh) translateX(100px) rotate(720deg);
-    }
-}
-
-@keyframes fall-spin {
-    0% {
-        opacity: 1;
-        transform: translateY(0) translateX(0) rotateZ(0deg) rotateX(0deg);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(100vh) translateX(-150px) rotateZ(1080deg) rotateX(360deg);
-    }
-}
-
-@keyframes fall-wave {
-    0% {
-        opacity: 1;
-        transform: translateY(0) translateX(0) rotate(0deg) scale(1);
-    }
-    50% {
-        transform: translateY(50vh) translateX(200px) rotate(360deg) scale(1.2);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(100vh) translateX(0) rotate(720deg) scale(0.5);
-    }
-}
-
-@keyframes fall-bounce {
-    0% {
-        opacity: 1;
-        transform: translateY(0) translateX(0) rotate(0deg);
-    }
-    25% {
-        transform: translateY(25vh) translateX(80px) rotate(180deg);
-    }
-    50% {
-        transform: translateY(50vh) translateX(-80px) rotate(360deg);
-    }
-    75% {
-        transform: translateY(75vh) translateX(100px) rotate(540deg);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(100vh) translateX(0) rotate(720deg);
-    }
-}
-
-/* Footer */
+/* Rodapé */
 footer {
-    background: rgba(26, 26, 46, 0.95);
-    border-top: 2px solid #d4af37;
-    padding: 2rem;
+    padding: 30px 15px;
     text-align: center;
-    color: #b8b8b8;
+    background: rgba(0, 0, 0, 0.4);
+    color: #ccc;
+    line-height: 1.8;
 }
 
-footer p {
-    margin-bottom: 0.5rem;
+/* Modal de imagem */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: fadeIn 0.3s ease;
 }
 
-/* Animations */
+.modal-content {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 85vh;
+    object-fit: contain;
+    margin: 0;
+    border-radius: 10px;
+    border: 3px solid #d4af37;
+    animation: zoomImagem 0.3s ease;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2001;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #d4af37;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomImagem {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -469,237 +382,138 @@ footer p {
     }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
+/* Confetes */
+.confetti {
+    position: fixed;
+    top: -20px;
+    z-index: 3000;
+    pointer-events: none;
+    animation-timing-function: linear;
+}
+
+@keyframes confettiFall {
     to {
-        opacity: 1;
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
     }
 }
 
-@keyframes flashAnimation {
+@keyframes confettiFallLeft {
+    to {
+        transform: translate(-100px, 110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@keyframes confettiFallRight {
+    to {
+        transform: translate(100px, 110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* Clarão da comemoração */
+.strong-flash {
+    position: fixed;
+    inset: 0;
+    z-index: 2500;
+    pointer-events: none;
+    animation: flashEffect 0.8s ease-out forwards;
+}
+
+@keyframes flashEffect {
     0% {
-        opacity: 1;
+        opacity: 0.9;
     }
     100% {
         opacity: 0;
     }
 }
 
-/* Responsive - Tablet */
-@media (max-width: 1024px) {
-    .hero h1 {
-        font-size: 3rem;
-    }
-
-    .about {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .about-image {
-        height: 300px;
-    }
-
-    .members-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-}
-
-/* Responsive - Mobile */
+/* Responsividade */
 @media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-
     nav {
-        padding: 0.8rem 1rem;
-        flex-wrap: wrap;
-        gap: 1rem;
+        justify-content: center;
+        text-align: center;
     }
 
     .logo {
-        font-size: 1.3rem;
-        letter-spacing: 1px;
+        width: 100%;
+        font-size: 1rem;
     }
 
     .nav-links {
-        gap: 0.8rem;
-        font-size: 0.85rem;
-        width: 100%;
         justify-content: center;
-        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 0.9rem;
     }
 
     .hero {
-        height: 70vh;
-        min-height: 500px;
+        min-height: 70vh;
     }
 
-    .hero h1 {
-        font-size: 1.8rem;
-        margin-bottom: 0.5rem;
+    .hero-content h1 {
+        font-size: 2rem;
     }
 
-    .hero p {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .cta-button {
-        padding: 0.8rem 2rem;
-        font-size: 0.95rem;
+    .hero-content p {
+        font-size: 1.2rem;
     }
 
     .about {
-        padding: 3rem 1rem;
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .about-text h2 {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-    }
-
-    .about-text p {
-        font-size: 0.95rem;
-        margin-bottom: 0.8rem;
+        padding: 50px 6%;
     }
 
     .about-image {
-        height: 250px;
-        border: 2px solid #d4af37;
+        height: auto;
+        min-height: 250px;
     }
 
-    .gallery {
-        padding: 3rem 1rem;
+    .about-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
     }
 
-    .gallery h2 {
-        font-size: 1.8rem;
-        margin-bottom: 2rem;
-    }
-
-    .gallery-container {
-        max-width: 100%;
+    .gallery,
+    .members,
+    .quotes,
+    .birthday {
+        padding: 50px 6%;
     }
 
     .gallery-item {
         height: 350px;
-        border: 2px solid #d4af37;
     }
 
-    .members {
-        padding: 3rem 1rem;
-    }
-
-    .members h2 {
-        font-size: 1.8rem;
-        margin-bottom: 2rem;
-    }
-
-    .members-grid {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 1.5rem;
+    .gallery-item-overlay {
+        opacity: 1;
     }
 
     .member-avatar {
-        height: 200px;
-        font-size: 2.5rem;
+        width: 120px;
+        height: 120px;
     }
 
-    .member-name {
-        font-size: 1.1rem;
-        margin-top: 0.8rem;
-    }
-
-    .member-role {
-        font-size: 0.8rem;
-    }
-
-    .quotes {
-        padding: 3rem 1rem;
-    }
-
-    .quotes h2 {
-        font-size: 1.8rem;
-        margin-bottom: 2rem;
-    }
-
-    .quote-card {
-        max-width: 100%;
-        margin: 1.5rem auto;
-        padding: 1.5rem;
-        font-size: 1rem;
-        border-left: 4px solid #d4af37;
-    }
-
-    .quote-author {
-        margin-top: 0.8rem;
-        font-size: 0.9rem;
-    }
-
-    .birthday {
-        padding: 3rem 1rem;
-    }
-
-    .birthday h2 {
-        font-size: 1.8rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .birthday-message {
-        padding: 1.5rem;
-        font-size: 0.95rem;
-        line-height: 1.6;
-    }
-
-    .birthday-message p {
-        margin-bottom: 1rem;
-    }
-
-    .birthday-message p:last-of-type {
-        font-size: 1.2rem;
-        margin-top: 1.5rem;
-    }
-
-    footer {
-        padding: 1.5rem 1rem;
-        font-size: 0.85rem;
+    .modal {
+        padding: 15px;
     }
 
     .modal-content {
-        width: 95%;
-        margin-top: 20%;
+        max-width: 95vw;
+        max-height: 80vh;
     }
 
     .close {
         top: 10px;
         right: 15px;
-        font-size: 1.5rem;
+        font-size: 32px;
     }
 }
 
-/* Responsive - Small Mobile */
 @media (max-width: 480px) {
-    .logo {
-        font-size: 1.1rem;
-        letter-spacing: 0.5px;
-    }
-
-    .nav-links {
-        gap: 0.5rem;
-        font-size: 0.75rem;
-    }
-
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-
-    .hero p {
-        font-size: 0.9rem;
+    .hero-content h1 {
+        font-size: 1.6rem;
     }
 
     .about-text h2,
@@ -707,88 +521,18 @@ footer p {
     .members h2,
     .quotes h2,
     .birthday h2 {
-        font-size: 1.5rem;
-    }
-
-    .members-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 1rem;
-    }
-
-    .member-avatar {
-        height: 150px;
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .gallery-item {
         height: 280px;
     }
-}
 
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    animation: fadeIn 0.3s ease;
-}
-
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 800px;
-    margin-top: 5%;
-    border-radius: 10px;
-    border: 3px solid #d4af37;
-}
-
-.close {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    color: #d4af37;
-    font-size: 2rem;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 2001;
-}
-
-.close:hover {
-    color: #e0e0e0;
-}
-/* Ajustes finais para imagens em celulares — mantém todas as cores e o desktop */
-@media (max-width: 768px) {
-    /* Foto da Gabriela: altura acompanha a proporção original para não cortar */
-    .about-image {
-        height: auto;
-        min-height: 0;
+    .quote-card {
+        padding: 20px;
     }
 
-    .about-image img {
-        display: block;
-        width: 100%;
-        height: auto;
-        max-height: 70vh;
-        object-fit: contain;
-        object-position: center;
-    }
-
-    /* Fotos dos cantores e imagens da galeria: mostrar a imagem inteira */
-    .member-avatar img,
-    .gallery-item img {
-        object-fit: contain;
-        object-position: center;
-    }
-
-    /* Evita que o efeito de hover volte a ampliar/cortar as fotos na tela touch */
-    .gallery-item:hover,
-    .gallery-item:hover img {
-        transform: none;
+    .quote-card p {
+        font-size: 1rem;
     }
 }
